@@ -1,1 +1,0 @@
-Cambio temporal de J0hanM13 para practicar git revert con su identidad.
