@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Formulario de Compra</title>
+</head>
+    <style>
+        body {
+            background: url('Imagenes/fondo.formulario.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+    </style>
+<body text="#FFF" bgcolor="#000" link="#FFF" vlink="#8AA1FF" alink="#FFF">
+      
+    <!--Menu de navegación-->
+    <center>
+        <table border="0" cellpadding="10" cellpading="0" bgcolor="#0049A3">
+            <tr>
+                <td><a href="inicio.html" title="Inicio"> <b>Inicio</b></a></td>
+                <td>|</td>
+                <td><a href="acerca.html" title="Inicio"> <b>Acerca</b></a></td>
+                <td>|</td>
+                <td><a href="contacto.html" title="Contacto"> <b>Contacto</b></a></td>
+                <td>|</td>
+                <td><a href="formulario.html" title="Formulario"> <b>Formulario de compra</b></a></td>
+            </tr>
+        </table>
+    </center>
+
+    <center><h1>Formulario de Pedido de Bicicleta</h1></center>
+
+    <center>
+        <form action="https://example.com/procesar_pedido" method="post" autocomplete="on">
+        <table border="0" cellpadding="10" cellspacing="0" bgcolor="#282828" width="750">
+            <tr>
+                <td>
+
+                    <!--Datos de envío-->
+                    <fieldset>
+                        <legend><b>Datos de Envío y Facturación</b></legend>
+                        <p>
+                            <label for="nombre">Nombre completo (requerido):</label><br />
+                            <input type="text" id="nombre" name="nombre" required minlength="3" maxlength="60" placeholder="Ej. Carlos Martínez" />
+                        </p>
+
+                        <p>
+                            <label for="email">Email (para la factura):</label><br />
+                            <input type="email" id="email" name="email" required placeholder="Email" />
+                        </p>
+
+                        <p>
+                            <label for="tel">Teléfono (España, 9 dígitos):</label><br />
+                            <input type="tel" id="tel" name="tel" required pattern="^[0-9]{9}$" placeholder="600111222" title="Debe contener 9 números" />
+                        </p>
+
+                         <p>
+                            <label for="direccion">Dirección completa de entrega:</label><br />
+                            <input type="text" id="direccion" name="direccion" required maxlength="100" placeholder="Calle, nº, piso..." />
+                        </p>
+
+                        <p>
+                            <label for="notas">Instrucciones de envio:</label><br />
+                           <textarea id="notas" name="notas" rows="4" cols="60" maxlength="300" placeholder=""></textarea>
+                        </p>
+
+                        <p>
+                           <label for="fecha_entrega">Fecha preferida de entrega:</label><br />
+                           <input type="date" id="fecha_entrega" name="fecha_entrega" required />  
+                        </p>
+                    </fieldset>
+
+                    <br>
+
+                    <!--Configuración de la bicicleta-->
+                    <fieldset>
+                        <legend><b>Configuración de la Bicicleta</b></legend>
+                        <p>
+                             <label for="modelo">Selecciona el Modelo:</label><br />
+                                    <select id="modelo" name="modelo" required>
+                                        <option value="">-- Elige un modelo --</option>
+                                        <option value="mtb">Mountain Bike - Terra Extreme</option>
+                                        <option value="ruta">Ruta - Aero Speed</option>
+                                        <option value="urbana">Urbana - City Cruiser</option>
+                                        <option value="electrica">Eléctrica - E-Volt 500</option>
+                                    </select>
+                        </p>
+                
+                         <p>
+                            <b>Tipo de frenos deseado:</b><br />
+                            <label><input type="radio" name="frenos" value="hidraulico" required /> Disco Hidráulico</label>
+                            <label><input type="radio" name="frenos" value="mecanico" /> Disco Mecánico</label>
+                            <label><input type="radio" name="frenos" value="vbrake" /> V-Brake Clásico</label>
+                         </p>
+
+                         <p>
+                            <label for="color_bici">Color del cuadro personalizado:</label><br />
+                            <input type="color" id="color_bici" name="color_bici" value="#ff5500" />
+                         </p>
+                    </fieldset>
+
+                    <br>
+
+                    <!--Extras-->
+                     <fieldset>
+                        <legend><b>Extras y Complementos</b></legend>
+                        <p>
+                            <b>Añadir accesorios (Selección múltiple):</b><br />
+                            <label><input type="checkbox" name="extras[]" value="casco" /> Casco de protección</label><br />
+                            <label><input type="checkbox" name="extras[]" value="luces" /> Kit de luces LED (Delantera y trasera)</label><br />
+                            <label><input type="checkbox" name="extras[]" value="candado" /> Candado </label><br />
+                            <label><input type="checkbox" name="extras[]" value="bidon" checked /> Portabidón y bidón de regalo</label>
+                        </p>
+                        </fieldset>
+
+                        <br>
+                        
+                        <!--Botones centrados-->
+                        <center>
+                            <button type="submit">Confirmar Pedido</button>
+                            <button type="reset">Borrar Formulario</button>
+                        </center>
+                </td>
+            </tr>
+        </table>
+        </form>
+    </center>
+
+    <br>
+
+        <center><small>&copy; 2026 BiciShop</small></center>
+
+</body>
+</html>
